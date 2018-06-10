@@ -1,0 +1,9 @@
+@keyframes fader {
+    0%   { opacity: 1; }
+    10% { opacity: .8; }
+    25% { opacity: .4; }
+    50% { opacity: 0;  }
+    60% { opacity: .4; }
+    75% { opacity: .8; }
+    100% { opacity: 1; }
+}
