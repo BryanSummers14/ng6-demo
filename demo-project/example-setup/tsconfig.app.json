@@ -6,12 +6,12 @@
     "module": "es2015",
     "types": [],
     "paths": {
-      "@pages": ["app/pages"],
-      "@pages/*": ["app/pages/*"],
-      "@components": ["app/components"],
-      "@components/*": ["app/components/*"],
-      "@services": ["app/services"],
-      "@services/*": ["app/services/*"]
+      "@pages": ["src/app/pages"],
+      "@pages/*": ["src/app/pages/*"],
+      "@components": ["src/app/components"],
+      "@components/*": ["src/app/components/*"],
+      "@services": ["src/app/services"],
+      "@services/*": ["src/app/services/*"]
     }
   },
   "exclude": [

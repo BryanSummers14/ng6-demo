@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Why use Angular?
 
-Feel free to skip this section and just get to the examples. This is just my thoughts on why anyone would need or use Angular. 
+Feel free to skip this section if you just want to get to the examples. This is just my thoughts on why anyone would need or use Angular (or something similar). 
 
-If Angular is just compiles down to HTML, CSS, and plain old JavaScript, why the heck would I bother with yet another layer of abstraction when I could just write it directly? With JavaScript I add event listeners, and then attach some callbacks. So would I want to bother having to deal with dependency injection, a module system, services, directives, pipes, decorators... this list goes on. To understand why anyone would bother with such complications, I think we need to go back in time a little bit. In [Atomic Design](http://atomicdesign.bradfrost.com) by Brad Frost, he discusses
+If Angular is just compiles down to HTML, CSS, and plain old JavaScript, why the heck would I bother with yet another layer of abstraction when I could just write it directly? With JavaScript I add event listeners, and then attach some callbacks. So would I want to bother having to deal with dependency injection, a module system, services, directives, pipes, decorators... the list goes on. To understand why anyone would bother with such complications, I think we need to go back in time a little bit. In [Atomic Design](http://atomicdesign.bradfrost.com) by Brad Frost, he discusses
 
 > Tim Berners-Lee invented the World Wide Web so that he, his colleagues at CERN, and other academics could easily share and link together their world of documents. This document-based, academic genesis of the web is why the concept of the page is so deeply ingrained in the vocabulary of the internet.
 
@@ -30,21 +30,25 @@ More and more users are expecting (and rightly so) more and more functionality f
 
 > An even more alarming statistic is that 64% of shoppers who are dissatisfied with an online store’s experience & loading time will take their business elsewhere.
 
-So how do we deliver increasingly complex web applications and deliver them fast? 
+So how do we deliver increasingly complex web applications and deliver them fast? Well to decrease bundle size and ship only what we need, there's code splitting. I won't lie, you naturally should get this with a multi-page app, but for a single-page app (which ideally has more natural transitions and less cognitive load on users having to make a mental map of a new page) it can be a complex mess determining what components are shipped, including any dependencies. Enter webpack which the frameworks I recommend all use under the hood. 
 
 I would consider the 3 big players for front end frameworks (there are of course hundreds) are Angular, React, and up and coming Vue. Not to discount Preact, but because it's under the same mental model as React, there's no need to dig in too deep here.
 
-I would differentiate them like so: Angular is the whole ecosystem. It comes with everything to you need to make a full blown complex web app, including dependency injection, typescript out of the box, services, rxjs, DOM abstractions, Animations are based on the WebAnimationsApi so animations run in a separate thread and don't lock up the DOM, and so much more.
+I would differentiate them like so: 
 
-React is a more modular view layer DSL (JSX is really only used in React AFAIK so I'm counting it). React provides no abstraction for services, routing, http, it is strictly the view layer, and at that, it is incredible. React is absolutely amazing for modular components, and predictable UI.
+Angular is the whole ecosystem. As such, to me it is the clear winner for enterprise applications. It comes with everything you need to make a full blown complex web app, including dependency injection, typescript out of the box, services, rxjs, DOM abstractions, Animations are based on the WebAnimationsApi so animations run in a separate thread and don't lock up the DOM, and so much more. [Angular docs](https://angular.io/docs), [Angular CDK](https://material.angular.io/cdk/categories)
 
-As for Vue, it really is more of an outlier as it is more extensible than either. It isn't as full blown as Angular, but provides more than React. It is easy to add Typescript and write it in an Angular looking fashion, as well as JSX and have React looking components all within the same app. And if you just want to use the basic version of it, it doesn't even require a build step [Replacing jQuery With Vue.js: No Build Step Necessary](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/)
+React is a more modular view layer DSL (JSX is really only used in React AFAIK so I'm counting it). React provides no abstraction for services, routing, http, it is strictly the view layer, and at that, it is incredible. React is absolutely amazing for modular components, and predictable UI at a view component level.
+
+As for Vue, it really is more of an outlier as it is more of a is a progressive framework than either of React or Angular. It isn't as full blown as Angular, but provides more than React. It is easy to add Typescript and write it in an Angular looking fashion, as well as JSX and have React looking components all within the same app. And if you just want to use the basic version of it, it doesn't even require a build step [Replacing jQuery With Vue.js: No Build Step Necessary](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/)
 
 If you are just building a few simple web pages, there is no reason for added complexity, there is nothing wrong with jQuery for simple sites. But imagine using only jQuery to build [this](http://akveo.com/ngx-admin/#/pages/dashboard) as a single-page app.
 
-And just because I find it awesome, you can check out [vue-babylon](https://beg-in.github.io/vue-babylonjs/#/home)
 
 In the end it's all about building incredible experiences for our users [Native-Like Animations for Page Transitions on the Web](https://css-tricks.com/native-like-animations-for-page-transitions-on-the-web/)
+
+And just because I find it awesome, you can check out [vue-babylon](https://beg-in.github.io/vue-babylonjs/#/home)
+
 ## Development server
 
 Run `ng serve` for a dev server for a basic project, to serve the example project run `ng serve --project example-setup`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

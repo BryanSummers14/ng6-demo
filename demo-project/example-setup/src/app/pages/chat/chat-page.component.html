@@ -1,0 +1,19 @@
+<main class="chat-page">
+  <section class="chat-window">
+    <mat-card class="chat-window-card">
+      <mat-card-header>
+        <mat-card-title>Get Chatting!</mat-card-title>
+        <button mat-raised-button color="warn" (click)="logOut()">Logout</button>
+      </mat-card-header>
+      <mat-card-content>
+        <p *ngFor="let message of (chatMessages$ | async)" [className]="message.userId === user.id ? 'message-self' : 'message-other'">
+          {{ message.message }}
+        </p>
+      </mat-card-content>
+      <mat-form-field>
+        <input matInput #chat type="text" placeholder="Say Something" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="sendChat(chat.value)">Send</button>
+    </mat-card>
+  </section>
+</main>

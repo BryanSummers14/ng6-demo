@@ -1,0 +1,22 @@
+<mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Login to get Chatting</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-error *ngIf="error">Invalid email/password</mat-error>
+      <form>
+      <mat-form-field>
+        <input matInput #email type="email" placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Password</mat-label>
+        <input matInput #password type="password">
+      </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+      <button mat-raised-button color="warn" (click)="onReset()">Clear</button>
+      <button mat-raised-button color="accent" (click)="switchState()">Register</button>
+    </mat-card-actions>
+  </mat-card>

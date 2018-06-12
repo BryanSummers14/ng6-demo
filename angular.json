@@ -427,7 +427,7 @@
               "demo-project/example-setup/src/assets"
             ],
             "styles": [
-              "demo-project/example-setup/src/styles.css"
+              "demo-project/example-setup/src/styles.scss"
             ],
             "scripts": []
           },

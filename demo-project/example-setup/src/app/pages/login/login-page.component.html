@@ -1,0 +1,12 @@
+<main class="container">
+  <app-login *ngIf="login"
+             (login)="handleLogin($event)" 
+             [error]="hasError"
+             (switch)="switchState()"
+             (reset)="handleReset()"></app-login>
+  <app-register *ngIf="register"
+                (register)="handleRegister($event)"
+                [error]="hasError"
+                (switch)="switchState()"
+                (reset)="handleReset()"></app-register>
+</main>
