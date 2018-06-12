@@ -8,6 +8,8 @@
       <mat-card-content>
         <p *ngFor="let message of (chatMessages$ | async)" [className]="message.userId === user.id ? 'message-self' : 'message-other'">
           {{ message.message }}
+          <br />
+          - <span class="author"><em>{{ message.username }}</em></span>
         </p>
       </mat-card-content>
       <mat-form-field>
