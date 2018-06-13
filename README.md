@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Feel free to skip this section if you just want to get to the examples. This is just my thoughts on why anyone would need or use Angular (or something similar). 
 
-If Angular is just compiles down to HTML, CSS, and plain old JavaScript, why the heck would I bother with yet another layer of abstraction when I could just write it directly? With JavaScript I add event listeners, and then attach some callbacks. So would I want to bother having to deal with dependency injection, a module system, services, directives, pipes, decorators... the list goes on. To understand why anyone would bother with such complications, I think we need to go back in time a little bit. In [Atomic Design](http://atomicdesign.bradfrost.com) Brad Frost discusses
+If Angular just compiles down to HTML, CSS, and plain old JavaScript, why the heck would I bother with yet another layer of abstraction when I could just write it directly? With JavaScript I add event listeners, and then attach some callbacks. So would I want to bother having to deal with dependency injection, a module system, services, directives, pipes, decorators... the list goes on. To understand why anyone would bother with such complications, I think we need to go back in time a little bit. In [Atomic Design](http://atomicdesign.bradfrost.com) Brad Frost discusses
 
 > Tim Berners-Lee invented the World Wide Web so that he, his colleagues at CERN, and other academics could easily share and link together their world of documents. This document-based, academic genesis of the web is why the concept of the page is so deeply ingrained in the vocabulary of the internet.
 
